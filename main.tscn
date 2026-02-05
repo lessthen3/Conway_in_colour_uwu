@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://dqk2sqmpcoom0"]
+
+[ext_resource type="Script" uid="uid://bd2v1dm4siqmx" path="res://ConwaysGame.cs" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bdvyeu5owf8g0" path="res://LifeGrid.cs" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://clr6tamfy38dq" path="res://play_button.png" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://lc5prp6uqku" path="res://pause_button.png" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://c4gifbpdtrcka" path="res://reset_button.png" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://cj5m5f2nxslmd" path="res://speed_label.png" id="6_272bh"]
+
+[node name="Main_UwU" type="Node2D" unique_id=5693225]
+script = ExtResource("1_ig7tw")
+
+[node name="Ticker" type="Timer" parent="." unique_id=1689831304]
+
+[node name="Canny" type="CanvasLayer" parent="." unique_id=1322156451]
+
+[node name="Life_Grid" type="TextureRect" parent="Canny" unique_id=1317834312]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_0xm2m")
+
+[node name="UI" type="Control" parent="Canny" unique_id=628815823]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1600.0
+offset_bottom = -800.0
+
+[node name="Current_Colour_Preview" type="ColorRect" parent="Canny/UI" unique_id=1509661291]
+layout_mode = 0
+offset_left = 1091.0
+offset_top = 564.0
+offset_right = 1200.0
+offset_bottom = 604.0
+
+[node name="Colour_Picker" type="ColorPickerButton" parent="Canny/UI" unique_id=1371667225]
+layout_mode = 0
+offset_left = 1437.0
+offset_right = 1599.0
+offset_bottom = 21.0
+
+[node name="Play_Button" type="TextureButton" parent="Canny/UI" unique_id=937886443]
+layout_mode = 0
+offset_left = 1407.0
+offset_top = 735.0
+offset_right = 1599.0
+offset_bottom = 799.0
+texture_normal = ExtResource("3_h2yge")
+
+[node name="Pause_Button" type="TextureButton" parent="Canny/UI" unique_id=1671504748]
+layout_mode = 0
+offset_left = 1100.0
+offset_top = 735.0
+offset_right = 1292.0
+offset_bottom = 799.0
+texture_normal = ExtResource("4_1bvp3")
+
+[node name="Reset_Button" type="TextureButton" parent="Canny/UI" unique_id=1552585492]
+layout_mode = 0
+offset_left = 1100.0
+offset_top = 638.0
+offset_right = 1292.0
+offset_bottom = 702.0
+texture_normal = ExtResource("5_7mycd")
+
+[node name="Speed" type="HSlider" parent="Canny/UI" unique_id=1751029680]
+layout_mode = 0
+offset_left = 1346.0
+offset_top = 615.0
+offset_right = 1597.0
+offset_bottom = 670.0
+max_value = 1.0
+
+[node name="Speed_Label" type="TextureRect" parent="Canny/UI" unique_id=1671972245]
+layout_mode = 0
+offset_left = 1358.0
+offset_top = 559.0
+offset_right = 1596.0
+offset_bottom = 623.0
+texture = ExtResource("6_272bh")
+
+[node name="Brush_Size" type="Label" parent="Canny/UI" unique_id=876541877]
+layout_mode = 0
+offset_left = 1049.0
+offset_top = 491.0
+offset_right = 1305.0
+offset_bottom = 545.0
+
+[node name="Palette_Bar" type="HBoxContainer" parent="Canny/UI" unique_id=72925226]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 433.0
+offset_right = 1585.0
+offset_bottom = 491.0
+alignment = 1
+
+[node name="Swatch0" type="TextureButton" parent="Canny/UI/Palette_Bar" unique_id=2009949722]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Fill" type="ColorRect" parent="Canny/UI/Palette_Bar/Swatch0" unique_id=1737667207]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Swatch1" type="TextureButton" parent="Canny/UI/Palette_Bar" unique_id=1832621659]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Fill" type="ColorRect" parent="Canny/UI/Palette_Bar/Swatch1" unique_id=2053707847]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Swatch2" type="TextureButton" parent="Canny/UI/Palette_Bar" unique_id=1395639762]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Fill" type="ColorRect" parent="Canny/UI/Palette_Bar/Swatch2" unique_id=892574164]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Swatch3" type="TextureButton" parent="Canny/UI/Palette_Bar" unique_id=683162019]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Fill" type="ColorRect" parent="Canny/UI/Palette_Bar/Swatch3" unique_id=1282729956]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Swatch4" type="TextureButton" parent="Canny/UI/Palette_Bar" unique_id=2132261110]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Fill" type="ColorRect" parent="Canny/UI/Palette_Bar/Swatch4" unique_id=1385057525]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Swatch5" type="TextureButton" parent="Canny/UI/Palette_Bar" unique_id=950038293]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Fill" type="ColorRect" parent="Canny/UI/Palette_Bar/Swatch5" unique_id=1147135896]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Swatch6" type="TextureButton" parent="Canny/UI/Palette_Bar" unique_id=2123197853]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Fill" type="ColorRect" parent="Canny/UI/Palette_Bar/Swatch6" unique_id=1948314529]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Swatch7" type="TextureButton" parent="Canny/UI/Palette_Bar" unique_id=907866199]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Fill" type="ColorRect" parent="Canny/UI/Palette_Bar/Swatch7" unique_id=806795561]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
